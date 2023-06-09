@@ -1,4 +1,7 @@
+find_package(CUDA REQUIRED)
+
 set(CMAKE_CUDA_COMPILER  /usr/local/cuda/bin/nvcc)
+set(CMAKE_CUDA_FLAGS "-arch=sm_86 -O2")
 cmake_minimum_required(VERSION 3.22.1)
 project(fast_traversal LANGUAGES CXX CUDA)
 enable_language(CUDA)
